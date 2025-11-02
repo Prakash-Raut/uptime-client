@@ -32,7 +32,7 @@ import { useMediaQuery } from "@/hooks/use-media-query";
 import { cn } from "@/lib/utils";
 import { createMonitor, createMonitorData } from "@/services/monitor";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { Plus } from "lucide-react";
+import { PlusIcon } from "lucide-react";
 import * as React from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
@@ -45,9 +45,9 @@ export function MonitorDrawer() {
     return (
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogTrigger asChild>
-          <Button variant="outline">
-            <Plus size={16} />
-            Add Monitor
+          <Button variant="default">
+            <PlusIcon size={16} />
+            Create Monitor
           </Button>
         </DialogTrigger>
         <DialogContent className="bg-muted sm:max-w-[768px]">
@@ -68,8 +68,8 @@ export function MonitorDrawer() {
     <Drawer open={open} onOpenChange={setOpen}>
       <DrawerTrigger asChild>
         <Button variant="outline">
-          <Plus size={16} />
-          Add Monitor
+          <PlusIcon size={16} />
+          Create Monitor
         </Button>
       </DrawerTrigger>
       <DrawerContent>

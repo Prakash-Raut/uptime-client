@@ -16,3 +16,5 @@ export type MonitorData = z.infer<typeof monitorSchema>;
 export const getMonitors = async () => await api.get(`/websites`);
 export const createMonitor = async (data: createMonitorData) =>
   await api.post(`/websites`, data);
+export const getMonitor = async (id: string) =>
+  await api.get(`/websites/${id}`);
